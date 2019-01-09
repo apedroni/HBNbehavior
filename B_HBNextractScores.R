@@ -1,4 +1,5 @@
 # Script to extract scores with specific tags 
+# A Pedroni 2018
 
 rm(list=ls(all=TRUE))
 setwd("~/Dropbox/CMI_Behavioral_Analyses/AndreasBehavioralDataAnalysis/")
@@ -30,6 +31,9 @@ variableNameTable = variableNameTable[sel,]
 Selection = as.character(variableNameTable$Identifiers[1]) 
 # by Tag 
 Selection = as.character(variableNameTable$Identifiers[as.character(variableNameTable$Main.Tag) == "Cognition"]) 
+# by string
+Selection = c("WISC_BD_Raw","WISC_Similarities_Raw","WISC_MR_Raw","WISC_DS_Raw","WISC_Coding_Raw","WISC_Vocab_Raw","WISC_FW_Raw","WISC_VP_Raw","WISC_PS_Raw","WISC_SS_Raw")
+
 
 SelectedData = AllData[,c("Anonymized.ID",Selection)]
 write.csv(SelectedData, paste(datadirectory,"MergedBehavioralData/SelectedData.csv",sep=""),row.names = FALSE)
