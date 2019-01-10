@@ -1,4 +1,5 @@
 # This script transforms the selected Data if B_HBNextractScores.R 
+# A Pedroni 2018
 # 1. Plot histograms of the data 
 # 2. Inspect them visually. Non-normally distributed
 # variables can be indivated in select variables to be transformed in section:
